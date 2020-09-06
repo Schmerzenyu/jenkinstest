@@ -1,0 +1,27 @@
+spring:
+  mqtt:
+    client:
+      id: mqttId
+    completionTimeout: 3000
+    default:
+      topic: topic
+#    password: password
+    url: tcp://49.232.4.170:1883
+    username: root
+  application:
+    name: eureka-server
+server:
+  port: 8180
+eureka:
+  instance:
+    hostname: eurekamaster
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://127.0.0.1:${server.port}/eureka/
+
