@@ -19,6 +19,6 @@ public class TestController {
 
     @RequestMapping("/jenkins")
     public String jenkins(){
-        return "jenkins complete";
+        return "jenkins complete changed";
     }
 }
