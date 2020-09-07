@@ -8,15 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class TestController {
 
-    @Autowired
-    private MqttGateway mqttGateway;
-
-    @RequestMapping("/sendMqtt.do")
-    public String sendMqtt(String  sendData){
-        mqttGateway.sendToMqtt(sendData,"hello");
-        return "OK";
-    }
-
     @RequestMapping("/jenkins")
     public String jenkins(){
         return "jenkins complete changed";
